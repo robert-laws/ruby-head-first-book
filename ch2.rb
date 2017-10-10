@@ -88,6 +88,6 @@ class Boat
   end
 end
 
-tug = Boat.new("Tug")
+tug = Boat.new("Tugboat")
 tug.year = 2011
 tug.show_info
