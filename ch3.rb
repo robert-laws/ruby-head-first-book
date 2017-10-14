@@ -1,33 +1,37 @@
-# Chapter 3 - Inheritance
+# Chapter 3 - Basic Inheritance
 
-class Worker
+class Worker  
   attr_accessor :name, :age
 
-  def initialize(name, age)
-    @name = name
-    @age = age
+  def go_to_work(name)
+    puts "#{name} is going to work." 
   end
-
 end
 
 class Mechanic < Worker
-  attr_accessor :shop
+  attr_accessor :car
 
-  def initialize(name, age, shop)
-    super(name, age)
-    @shop = shop
-  end
-
-  def say_hello
-    puts "Hello, my name is #{name} and I am #{age} years old. I work in the #{shop} location."
+  def go_to_work(name, car)
+    super(name)
+    puts "#{name} is working on the car - #{car}"
   end
 end
 
 class Salesman < Worker
+  attr_accessor :store
 
+  def go_to_work(name)
+    super
+  end
 end
 
 
-bob = Mechanic.new("bob", 34, "downtown")
-bob.say_hello
-hal = Salesman.new("hal", 42)
+bob = Mechanic.new
+bob.name = "bob"
+bob.age = 34
+bob.car = "ford"
+bob.go_to_work(bob.name, bob.car)
+
+hal = Salesman.new
+hal.name = "hal"
+hal.go_to_work(hal.name)
