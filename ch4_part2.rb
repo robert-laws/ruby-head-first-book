@@ -1,0 +1,2 @@
+# Using initialize with inheritance
+
