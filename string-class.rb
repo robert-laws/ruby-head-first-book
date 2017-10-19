@@ -3,7 +3,7 @@
 name = 'bob'
 item = 'cap-'
 names = %w[hal ned jim kal bob]
-puts names[0].index('a')
+puts names[0].index('h')
 puts "hello, #{name}."
 
 # String class methods
